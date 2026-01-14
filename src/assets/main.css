@@ -1,0 +1,14 @@
+#app {
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  background-color: black;
+  color: ghostwhite;
+}
