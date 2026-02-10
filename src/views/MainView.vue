@@ -1,5 +1,5 @@
 <template>
-  <h1 class="link">Ziemie Północne</h1>
+  <Banner style="margin-top: 10%;"/>
   <div class="menu">
     <div class="link" @click="switchToMap">Mapa</div>
     <div class="link" @click="switchToGlossary">Glosariusz</div>
@@ -9,10 +9,13 @@
 
 <script>
   import router from '@/router/index.js';
+  import Banner from '@/components/Banner.vue';
 
   export default {
     name: 'MainView',
-    components: {},
+    components: {
+      Banner
+    },
     data() {
       return {};
     },

@@ -1,29 +1,25 @@
 <template>
-  <h1 class="link" @click="switchToMain">Ziemie Północne</h1>
+  <Banner v-bind:animated="false"/>
   <div>
     Map goes here
   </div>
 </template>
 
 <script>
-  import router from '@/router/index.js';
+  import Banner from '@/components/Banner.vue';
 
   export default {
     name: 'MapView',
-    components: {},
+    components: {
+      Banner
+    },
     data() {
       return {};
     },
-    methods: {
-      switchToMain() {
-        router.push('/');
-      }
-    }
+    methods: {}
   };
 </script>
 
 <style scoped>
-  .link {
-    cursor: pointer;
-  }
+
 </style>
