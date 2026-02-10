@@ -1,6 +1,6 @@
 <template>
   <div class="shadow-layer">
-    <div class="background-img"/>
+    <div class="background-img unselectable"/>
     <div class="clouds"/>
   </div>
   <RouterView/>
@@ -47,7 +47,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: clouds 60s infinite alternate;
+    animation: clouds 60s infinite linear alternate;
   }
   @keyframes clouds {
     25% {
