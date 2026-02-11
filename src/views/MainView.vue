@@ -1,5 +1,5 @@
 <template>
-  <Banner style="margin-top: 10%;"/>
+  <Banner style="margin-top: 3%;" ref="banner"/>
   <div class="menu">
     <div class="link" @click="switchToMap">Mapa</div>
     <div class="link" @click="switchToGlossary">Glosariusz</div>
@@ -21,7 +21,9 @@
     },
     methods: {
       switchToMap() {
-        router.push('/map');
+        this.$refs.banner.hideAndCall(
+          () => { router.push('/map'); }
+        );
       },
       switchToGlossary() {
         alert('To be implemented');

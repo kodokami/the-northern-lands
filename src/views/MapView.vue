@@ -1,5 +1,5 @@
 <template>
-  <Banner v-bind:animated="false"/>
+  <Banner no-banners="true"/>
   <div>
     Map goes here
   </div>
