@@ -21,8 +21,8 @@
     top: 0;
     left: 0;
     opacity: .6;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     z-index: -1;
   }
@@ -37,12 +37,12 @@
   }
   .clouds {
     position: absolute;
-    top: -10%;
-    left: -10%;
+    top: -30%;
+    left: -30%;
     transform: translate3d(0, 0, 0) rotate(.1deg);
     opacity: .8;
-    width: 120%;
-    height: 120%;
+    width: 140%;
+    height: 140%;
     background-image: url("@/assets/background/clouds.png");
     background-position: center;
     background-repeat: no-repeat;

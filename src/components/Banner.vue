@@ -4,13 +4,13 @@
          src="@/assets/banners/ribbon.png" alt="Ziemie Północne"
          >
     <div class="banners-container" v-if="!noBanners">
-      <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 20px;"
+      <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 4%;"
            src="@/assets/banners/ksiestwo-salacji.png" alt="Księstwo Salacji"
            >
-      <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 0px;"
+      <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 0;"
            src="@/assets/banners/ksiestwo-teganskie.png" alt="Ziemie Cedryka"
            >
-      <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 20px;"
+      <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 4%;"
            src="@/assets/banners/hrabstwo-hervieux.png" alt="Hrabstwo Hervieux"
            >
     </div>
@@ -77,7 +77,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 910px;
+    max-width: 910px;
+    width: 100%;
 /*     border: 1px solid red; */
   }
   .banners-container {
@@ -86,22 +87,25 @@
     justify-content: space-evenly;
     align-items: flex-start;
     width: 66%;
-    margin-top: -80px;
-    padding-right: 22px;
+    margin-top: -9%;
+    padding-right: 2.4%;
     overflow: hidden;
 /*     border: 1px solid green; */
   }
   .ribbon {
-    height: 180px;
-    width: 910px;
+    max-height: 180px;
+    max-width: 910px;
+    height: auto;
+    width: 100%;
     cursor: pointer;
     z-index: 10;
   }
   .banner {
-    max-height: 484px;
-    max-width: 300px;
-    height: 242px;
-    width: 150px;
+    max-height: 242px;
+    max-width: 150px;
+    height: auto;
+    width: 100%;
+    margin: 0 2%;
   }
   .inactive {
     cursor: default !important;
