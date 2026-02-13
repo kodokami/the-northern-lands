@@ -45,18 +45,20 @@
     },
     methods: {
       switchToMain() {
-        if (!this.isMainpage) {
-          if (!this.animated) {
-            // don't animate banners on exit
-            router.push('/');
-            return;
-          }
-
-          // animate banners on exit
-          this.hideAndCall(
-            () => { router.push('/'); }
-          );
+        if (this.isMainpage) {
+          // one does not simply walk from main to main
+          return;
         }
+        if (!this.animated) {
+          // don't run animation on exit
+          router.push('/');
+          return;
+        }
+        
+        // run animation on exit
+        this.hideAndCall(
+          () => { router.push('/'); }
+        );
       },
       hideAndCall(func) {
         this.hideBanner = true;
