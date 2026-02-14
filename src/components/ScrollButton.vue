@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-button" :class="{'active-button': !disabled, 'disabled': disabled}">
-    <slot />
+    <slot/>
   </div>
 </template>
 
