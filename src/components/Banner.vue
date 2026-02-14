@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container" :class="{'ribbon-dropdown': animated, 'slide-back': hideBanner}">
+  <div class="site-banner" :class="{'ribbon-dropdown': animated, 'slide-back': hideBanner}">
     <img class="ribbon" :class="{'inactive': isMainpage}" @click="switchToMain"
          src="@/assets/banner/ribbon.png" alt="Ziemie Północne"
          >
@@ -74,14 +74,15 @@
 </script>
 
 <style scoped>
-  .main-container {
+  .site-banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 910px;
+    min-width: 555px;
     width: 100%;
-/*     border: 1px solid red; */
+    margin-top: 2rem;
   }
   .banners-container {
     display: flex;
@@ -90,17 +91,18 @@
     align-items: flex-start;
     width: 66%;
     margin-top: -9%;
-    padding-right: 2.4%;
     overflow: hidden;
-/*     border: 1px solid green; */
   }
   .ribbon {
     max-height: 180px;
     max-width: 910px;
     height: auto;
     width: 100%;
-    cursor: pointer;
+    padding-left: 1.9%;
     z-index: 10;
+  }
+  .ribbon:hover {
+    cursor: pointer;
   }
   .banner {
     max-height: 242px;
@@ -117,10 +119,10 @@
   }
   @keyframes ribbon-dropdown {
     0% {
-      transform: translateY(-30vh)
+      transform: translateY(-30vh);
     }
     100% {
-      transform: translateY(0)
+      transform: translateY(0);
     }
   }
   .banner-dropdown {
@@ -128,10 +130,10 @@
   }
   @keyframes banner-dropdown {
     0% {
-      transform: translateY(-300px)
+      transform: translateY(-300px);
     }
     100% {
-      transform: translateY(0)
+      transform: translateY(0);
     }
   }
   .slide-back {
@@ -139,10 +141,10 @@
   }
   @keyframes slide-back {
     0% {
-      transform: translateY(0)
+      transform: translateY(0);
     }
     100% {
-      transform: translateY(-30vh)
+      transform: translateY(-30vh);
     }
   }
 </style>
