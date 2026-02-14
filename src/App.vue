@@ -3,7 +3,9 @@
     <div class="background-img unselectable"/>
     <div class="clouds"/>
   </div>
-  <RouterView/>
+  <div class="view-container">
+    <RouterView/>
+  </div>
 </template>
 
 <script>
