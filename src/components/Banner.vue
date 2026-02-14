@@ -1,17 +1,17 @@
 <template>
   <div class="main-container" :class="{'ribbon-dropdown': animated, 'slide-back': hideBanner}">
     <img class="ribbon" :class="{'inactive': isMainpage}" @click="switchToMain"
-         src="@/assets/banners/ribbon.png" alt="Ziemie Północne"
+         src="@/assets/banner/ribbon.png" alt="Ziemie Północne"
          >
     <div class="banners-container" v-if="!noBanners">
       <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 4%;"
-           src="@/assets/banners/ksiestwo-salacji.png" alt="Księstwo Salacji"
+           src="@/assets/banner/ksiestwo-salacji.png" alt="Księstwo Salacji"
            >
       <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 0;"
-           src="@/assets/banners/ksiestwo-teganskie.png" alt="Ziemie Cedryka"
+           src="@/assets/banner/ksiestwo-teganskie.png" alt="Ziemie Cedryka"
            >
       <img class="banner" :class="{'banner-dropdown': animated, 'slide-back': hideBanner}" style="margin-top: 4%;"
-           src="@/assets/banners/hrabstwo-hervieux.png" alt="Hrabstwo Hervieux"
+           src="@/assets/banner/hrabstwo-hervieux.png" alt="Hrabstwo Hervieux"
            >
     </div>
   </div>
