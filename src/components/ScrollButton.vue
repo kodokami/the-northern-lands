@@ -41,7 +41,7 @@
     text-shadow: 1px 1px 4px silver;
   }
   .disabled {
-    cursor: default !important;
+    cursor: not-allowed;
     filter: brightness(.9) saturate(0);
   }
 </style>
