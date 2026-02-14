@@ -1,9 +1,9 @@
 <template>
   <Banner ref="banner"/>
-  <div class="buttons-container" :class="{'fade-in': !fadeOutButtons, 'fade-out': fadeOutButtons}">
-    <ScrollButton @click="switchToMap">Mapa Świata</ScrollButton>
-    <ScrollButton @click="switchToGlossary" disabled>Glosariusz</ScrollButton>
-    <ScrollButton @click="switchToResources" disabled>Materiały</ScrollButton>   
+  <div class="buttons-container" :class="{'fade-in': !fadeOut, 'fade-out': fadeOut}">
+    <ScrollButton @click="switchPath('/map')">Mapa Świata</ScrollButton>
+    <ScrollButton @click="" disabled>Glosariusz</ScrollButton>
+    <ScrollButton @click="" disabled>Materiały</ScrollButton>   
   </div>
 </template>
 
@@ -20,24 +20,15 @@
     },
     data() {
       return {
-        fadeOutButtons: false
+        fadeOut: false
       };
     },
     methods: {
-      switchToMap() {
-        this.fadeOutView();
+      switchPath(path) {
+        this.fadeOut = true;
         this.$refs.banner.hideAndCall(
-          () => { router.push('/map'); }
+          () => { router.push(path); }
         );
-      },
-      switchToGlossary() {
-        return;
-      },
-      switchToResources() {
-        return;
-      },
-      fadeOutView() {
-        this.fadeOutButtons = true;
       }
     }
   };
