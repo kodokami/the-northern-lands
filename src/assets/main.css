@@ -28,6 +28,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100vh;
+  width: 100vw;
 }
 
 .unselectable {
@@ -39,6 +40,7 @@ body {
 
 .fade-in {
   animation: fade-in 1.1s linear;
+  animation-fill-mode: forwards;
 }
 @keyframes fade-in {
   0% {
@@ -51,6 +53,7 @@ body {
 
 .fade-out {
   animation: fade-out 1.1s linear;
+  animation-fill-mode: forwards;
 }
 @keyframes fade-out {
   0% {
